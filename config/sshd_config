@@ -1,0 +1,111 @@
+#
+# sshd_config - Hardened OpenSSH Configuration.
+# Seaton Jiang <hi@seatonjiang.com>
+#
+# The latest version of Aegis can be found at:
+# https://github.com/seatonjiang/aegis
+#
+# Copyright (C) 2021 Seaton Jiang
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
+
+# ======================== Manual configuration ========================
+
+#Port 22
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+# Listen to IPv4
+AddressFamily inet
+
+# Listen to IPv6
+#AddressFamily inet6
+
+# Limit SSH Access to Certain Users
+#AllowUsers ubuntu
+
+# Limit SSH Access to Certain Groups
+#AllowGroups ubuntu
+
+# Only authentication methods with publickey are allowed
+#AuthenticationMethods publickey
+
+# Disable password login
+#PasswordAuthentication no
+
+# ======================================================================
+
+# LogLevel VERBOSE logs user's key fingerprint on login.
+LogLevel VERBOSE
+
+# Disable root login
+PermitRootLogin no
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# Limit the maximum number of authentication attempts
+MaxAuthTries 3
+
+# Set a reduced login grace period
+LoginGraceTime 20
+
+# Disable other authentication methods
+ChallengeResponseAuthentication no
+KerberosAuthentication no
+GSSAPIAuthentication no
+
+# PAM authentication enabled to make password authentication available
+UsePAM yes
+
+# Override default of no subsystems
+Subsystem sftp internal-sftp
+
+# Disable X11 forwarding
+X11Forwarding no
+
+# Disable reverse DNS lookups
+UseDNS no
+
+# Disable authentication with empty passwords
+PermitEmptyPasswords no
+
+# Disable several miscellaneous options
+AllowAgentForwarding no
+AllowTcpForwarding no
+
+# let ClientAliveInterval handle keepalive
+TCPKeepAlive no
+
+# allow a maximum of two multiplexed sessions over a single TCP connection
+MaxSessions 3
+
+# send a keepalive message to the client when the session has been idle for 180 seconds
+ClientAliveInterval 180
+
+# number of client alive messages sent without client responding
+ClientAliveCountMax 3
+
+# prevent Unix-domain socket forwarding
+AllowStreamLocalForwarding no
+
+# Use SSH Protocol 2
+Protocol 2
+
+KexAlgorithms curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
+
+Include /etc/ssh/sshd_config.d/*.conf
