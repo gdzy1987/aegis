@@ -27,14 +27,18 @@
 
 ## 💻 工具截图
 
-<figure align="center">
+### 脚本执行
+
+<p align="center">
     <img src="https://s4.ax1x.com/2021/12/13/oOGVGF.png">
-    <figcaption>脚本执行</figcaption>
-</figure>
-<figure align="center">
+</p>
+
+### 登录信息
+
+<p align="center">
     <img src="https://s4.ax1x.com/2021/12/13/oO0hwQ.png">
-    <figcaption>登录信息</figcaption>
-</figure>
+</p>
+
 
 ## ✨ 工具特性
 

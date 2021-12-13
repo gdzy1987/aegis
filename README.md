@@ -27,14 +27,17 @@ English | [简体中文](README.zh-CN.md)
 
 ## 💻 Screenshot
 
-<figure align="center">
+### Script Execution
+
+<p align="center">
     <img src="https://s4.ax1x.com/2021/12/13/oOGVGF.png">
-    <figcaption>Script Execution</figcaption>
-</figure>
-<figure align="center">
+</p>
+
+### Login Information
+
+<p align="center">
     <img src="https://s4.ax1x.com/2021/12/13/oO0hwQ.png">
-    <figcaption>Login Information</figcaption>
-</figure>
+</p>
 
 ## ✨ Features
 
