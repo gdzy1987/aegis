@@ -1,0 +1,129 @@
+[English](README.md) | 简体中文
+
+<p align="center">
+    <img src="https://s4.ax1x.com/2021/12/13/oOi6v4.png">
+</p>
+
+<p align="center">
+    <img src="https://img.shields.io/static/v1?style=flat-square&message=Ubuntu&color=E95420&logo=Ubuntu&logoColor=FFFFFF&label=">
+    <a href="https://github.com/seatonjiang/aegis/issues">
+        <img src="https://img.shields.io/github/issues/seatonjiang/aegis?style=flat-square&color=blue">
+    </a>
+    <a href="https://github.com/seatonjiang/aegis/pulls">
+        <img src="https://img.shields.io/github/issues-pr/seatonjiang/aegis?style=flat-square&color=brightgreen">
+    </a>
+    <a href="https://github.com/seatonjiang/aegis/blob/main/LICENSE">
+        <img src="https://img.shields.io/github/license/seatonjiang/aegis?&style=flat-square">
+    </a>
+</p>
+
+<p align="center">
+    <a href="https://github.com/seatonjiang/aegis/issues">报告问题</a>
+    ·
+    <a href="https://github.com/seatonjiang/aegis/issues">功能需求</a>
+</p>
+
+<p align="center">针对 Ubuntu 服务器的系统安全加固工具</p>
+
+## 💻 工具截图
+
+<p align="center">
+    <img src="https://s4.ax1x.com/2021/12/13/oOGVGF.png">
+</p>
+
+## ✨ 工具特性
+
+- 限制密码使用期限为 30 天。
+- 密码过期 30 天后，该账户将被禁用。
+- 设置两次修改密码的时间间隔为 1 天。
+- 在密码过期前 7 天将发出警告。
+- 将系统默认加密算法设置为 SHA512。
+- 将会话超时策略设置为 900 秒。
+- 为新建的用户创建并加入一个同名的组。
+- 将新建用户的 home 目录权限设置为 0750。
+- 将存量用户的 home 目录权限设置为 0750。
+- 删除没有用的用户以及软件包。
+- 强化 OpenSSH 配置（有些配置需要手动配置）。
+- 禁止没有 home 目录的用户登录。
+- 禁止新建的用户使用 SHELL 登录。
+- 禁止上传和用户信息的功能。
+- 禁用 motd 中的广告组件。
+- 禁用 root 帐户。
+- 禁止删除用户时同步删除该用户的组。
+
+还有很多特性没有被列举出来，可以参考 `scripts` 目录下的文件了解更多信息。
+
+## 🚀 使用说明
+
+### 第一步：克隆仓库
+
+确保服务器安装了 Git，否则需要先用 `sudo apt install git` 命令安装软件：
+
+```shell
+git clone https://github.com/seatonjiang/aegis.git
+```
+
+### 第二步：编辑配置
+
+进入项目文件夹：
+
+```shell
+cd aegis
+```
+
+核对配置文件中的配置信息（配置文件说明在下文）：
+
+```shell
+vim aegis.conf
+```
+
+### 第三步：运行脚本
+
+如果是 root 账号，可以直接运行，如果是普通账号，需要使用 `sudo` 运行，而且必须用 `bash` 运行该脚本：
+
+```shell
+sudo bash aegis.sh
+```
+
+## 📝 配置文件
+
+```ini
+# 每一项操作完成后进行验证
+VERIFY='Y'
+
+# 在 motd 中添加生产环境的提示
+PROD_TIPS='Y'
+
+# 修改 SSH 端口，范围建议在 10000-65535 选择
+SSH_PORT='22'
+
+# 修改时区
+TIME_ZONE='Asia/Shanghai'
+
+# 修改主机名称（腾讯云、阿里云、华为云将自动拉取元数据）
+HOSTNAME='Ubuntu-Server'
+
+# 修改 DNS 服务器（腾讯云、阿里云、华为云将自动拉取元数据）
+DNS_SERVER='119.29.29.29'
+
+# 修改 NTP 服务器（腾讯云、阿里云、华为云将自动拉取元数据）
+NTP_SERVER='ntp.ntsc.ac.cn'
+```
+
+## 📂 目录结构
+
+下面是整个项目的文件夹结构，`config` 及 `scripts` 文件夹中的文件省略显示。
+
+```bash
+aegis
+├── aegis.conf
+├── aegis.sh
+├── config
+│   └── (some config files)
+└── scripts
+    └── (some script files)
+```
+
+## 🤝 参与共建
+
+我们欢迎所有的贡献，你可以将任何想法作为 pull requests 或 GitHub issues 提交，顺颂商祺 :)
