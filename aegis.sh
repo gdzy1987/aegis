@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Aegis - System security hardening tool for Ubuntu Server 20.04 or higher.
+# Aegis - System security hardening tool for Ubuntu Server.
 # Seaton Jiang <hi@seatonjiang.com>
 #
 # The latest version of Aegis can be found at:
