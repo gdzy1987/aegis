@@ -27,7 +27,7 @@ function aegis_debugshell()
     info_msg '\n%s\n' "[${STATS}] Disable debug-shell service"
 
     systemctl stop debug-shell.service
-    systemctl mask debug-shell.service  >/dev/null 2>&1
+    systemctl mask debug-shell.service >/dev/null 2>&1
 
     if [[ $VERIFY == "Y" ]]; then
         systemctl status debug-shell.service --no-pager

@@ -27,7 +27,7 @@ function aegis_ntpserver()
     info_msg '\n%s\n' "[${STATS}] Change NTP Server (Cloud servers automatically obtain exclusive configurations)"
 
     systemctl stop systemd-timesyncd
-    systemctl mask systemd-timesyncd
+    systemctl mask systemd-timesyncd >/dev/null 2>&1
 
     apt-get purge ntp -y >/dev/null 2>&1
 
