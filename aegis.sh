@@ -135,9 +135,10 @@ function aegis_banner()
 
 function aegis_help()
 {
-    echo -e "\nUsage:  $0 [--version] [--help]"
-    echo -e "Where:  --version     Print version and exit."
-    echo -e "        --help        Print help and exit."
+    echo -e "\nUsage:  $0 [--docker] [--version] [--help]"
+    echo -e "Where:  --docker     Install docker service and set registry mirrors."
+    echo -e "        --version    Print version and exit."
+    echo -e "        --help       Print help and exit."
     echo -e "\nMail bug reports or suggestions to <hi@seatonjiang.com>."
 }
 
@@ -187,6 +188,12 @@ fi
 while :; do
     [ -z "$1" ] && exit 0;
     case $1 in
+        --docker)
+            clear
+            aegis_banner
+            aegis_docker
+            exit 0
+        ;;
         --version)
             aegis_version
             exit 0

@@ -1,7 +1,7 @@
 English | [简体中文](README.zh-CN.md)
 
 <p align="center">
-    <img src="https://s4.ax1x.com/2021/12/13/oOi6v4.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/aegis.png">
 </p>
 
 <p align="center">
@@ -30,13 +30,13 @@ English | [简体中文](README.zh-CN.md)
 ### Script Execution
 
 <p align="center">
-    <img src="https://s4.ax1x.com/2021/12/13/oOGVGF.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/script-execution.png">
 </p>
 
 ### Login Information
 
 <p align="center">
-    <img src="https://s4.ax1x.com/2021/12/13/oO0hwQ.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/login-information.png">
 </p>
 
 ## ✨ Features
@@ -122,6 +122,20 @@ DNS_SERVER='119.29.29.29'
 NTP_SERVER='ntp.ntsc.ac.cn'
 ```
 
+## 🔨 Modular
+
+Aegis contains a number of standalone functions that are not in the auto-executed script and need to be used separately using parameters, which can be viewed using the `sudo bash aegis.sh --help` for all standalone functions.
+
+### Install docker service
+
+Install docker service and set registry mirrors (Tencent, Alibaba, HUAWEI Cloud automatically use their own acceleration address), and add run permission for non-root accounts.
+
+> After installation, please log out and log back in, then test docker.
+
+```shell
+sudo bash aegis.sh --docker
+```
+
 ## 📂 Structure
 
 A quick look at the folder structure of this project.
@@ -132,6 +146,8 @@ aegis
 ├── aegis.sh
 ├── config
 │   └── (some config files)
+├── images
+│   └── (some image files)
 └── scripts
     └── (some script files)
 ```

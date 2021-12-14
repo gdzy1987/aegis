@@ -1,7 +1,7 @@
 [English](README.md) | 简体中文
 
 <p align="center">
-    <img src="https://s4.ax1x.com/2021/12/13/oOi6v4.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/aegis.png">
 </p>
 
 <p align="center">
@@ -30,15 +30,14 @@
 ### 脚本执行
 
 <p align="center">
-    <img src="https://s4.ax1x.com/2021/12/13/oOGVGF.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/script-execution.png">
 </p>
 
 ### 登录信息
 
 <p align="center">
-    <img src="https://s4.ax1x.com/2021/12/13/oO0hwQ.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/login-information.png">
 </p>
-
 
 ## ✨ 工具特性
 
@@ -109,14 +108,28 @@ SSH_PORT='22'
 # 修改时区
 TIME_ZONE='Asia/Shanghai'
 
-# 修改主机名称（腾讯云、阿里云、华为云将自动拉取元数据）
+# 修改主机名称（腾讯云、阿里云、华为云自动拉取元数据）
 HOSTNAME='Ubuntu-Server'
 
-# 修改 DNS 服务器（腾讯云、阿里云、华为云将自动拉取元数据）
+# 修改 DNS 服务器（腾讯云、阿里云、华为云自动拉取元数据）
 DNS_SERVER='119.29.29.29'
 
-# 修改 NTP 服务器（腾讯云、阿里云、华为云将自动拉取元数据）
+# 修改 NTP 服务器（腾讯云、阿里云、华为云自动拉取元数据）
 NTP_SERVER='ntp.ntsc.ac.cn'
+```
+
+## 🔨 独立功能
+
+Aegis 中包含了一些独立的功能，这些功能并不在自动执行的脚本中，需要使用参数单独使用，可以使用 `sudo bash aegis.sh --help` 命令查看所有独立功能。
+
+### 安装 Docker
+
+安装 Docker 服务并设置镜像加速（腾讯云、阿里云、华为云自动使用其自有加速地址），添加非 `root` 账号的运行权限。
+
+> 安装完成后，请退出当前账号并重新登录，然后测试 Docker 的相关功能是否正常不报错。
+
+```shell
+sudo bash aegis.sh --docker
 ```
 
 ## 📂 目录结构
@@ -129,6 +142,8 @@ aegis
 ├── aegis.sh
 ├── config
 │   └── (some config files)
+├── images
+│   └── (some image files)
 └── scripts
     └── (some script files)
 ```
