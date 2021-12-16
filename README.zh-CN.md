@@ -71,6 +71,12 @@
 git clone https://github.com/seatonjiang/aegis.git
 ```
 
+如果因为网络问题无法连接，可以使用国内镜像仓库，但是镜像仓库会有 `1` 小时的延迟：
+
+```shell
+git clone https://gitee.com/seatonjiang/aegis.git
+```
+
 ### 第二步：编辑配置
 
 进入项目文件夹：
