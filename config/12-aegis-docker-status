@@ -32,7 +32,7 @@ R="\033[01;31m"
 N="\033[0m"
 
 if type docker >/dev/null 2>&1; then
-    mapfile -t containers < <(docker ps -a --format '{{.Names}}\t{{.Status}}' | sort -k1 | awk '{ print $1,$2 }')
+    mapfile -t containers < <(docker ps --format '{{.Names}}\t{{.Status}}' | sort -k1 | awk '{ print $1,$2 }')
 
     OUTPUT=""
     for i in "${!containers[@]}"; do
