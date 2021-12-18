@@ -31,6 +31,11 @@ function aegis_usersandgroup()
         userdel -r "${USERS}" >/dev/null 2>&1
     done
 
+    if [ -n "$(wget -qO- -t1 -T2 169.254.0.23)" ]; then
+        # Tencent Cloud Lighthouse
+        userdel -r lighthouse >/dev/null 2>&1
+    fi
+
     if [[ $VERIFY == "Y" ]]; then
         cat /etc/passwd
         echo
