@@ -51,7 +51,7 @@ function aegis_dnsserver()
     systemctl restart systemd-resolved
     systemctl enable systemd-resolved
 
-    rm -rf /etc/resolv.conf
+    find /etc/resolv.conf -delete
     ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
 
     if [[ $VERIFY == "Y" ]]; then
