@@ -33,16 +33,7 @@ function aegis_removepackages()
         apt-get purge "${PACKAGE}" -y >/dev/null 2>&1
     done
 
-    apt-get autoremove -y >/dev/null 2>&1
-    apt-get autoclean -y >/dev/null 2>&1
-
-    if [[ $VERIFY == "Y" ]]; then
-        apt-get autoremove
-        echo
-        apt-get autoclean
-    else
-        succ_msg '%s\n' "Success, this operation is complete!"
-    fi
+    succ_msg '%s\n' "Success, this operation is complete!"
 
     sleep 1
 
