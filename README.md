@@ -126,7 +126,15 @@ NTP_SERVER='ntp.ntsc.ac.cn'
 
 Aegis contains a number of standalone functions that are not in the auto-executed script and need to be used separately using parameters, which can be viewed using the `sudo bash aegis.sh --help` for all standalone functions.
 
-### Install docker service
+### Clear system
+
+Clear all system logs, cache and backup files.
+
+```shell
+sudo bash aegis.sh --clear
+```
+
+### Install docker
 
 Install docker service and set registry mirrors (Tencent, Alibaba, HUAWEI Cloud automatically use their own acceleration address), and add run permission for non-root accounts.
 

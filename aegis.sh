@@ -135,8 +135,9 @@ function aegis_banner()
 
 function aegis_help()
 {
-    echo -e "\nUsage:  $0 [--docker] [--version] [--help]"
-    echo -e "Where:  --docker     Install docker service and set registry mirrors."
+    echo -e "\nUsage:  $0 [--clear] [--docker] [--version] [--help]"
+    echo -e "Where:  --clear      Clear all system logs, cache and backup files."
+    echo -e "        --docker     Install docker service and set registry mirrors."
     echo -e "        --version    Print version and exit."
     echo -e "        --help       Print help and exit."
     echo -e "\nMail bug reports or suggestions to <hi@seatonjiang.com>."
@@ -192,6 +193,12 @@ while :; do
             clear
             aegis_banner
             aegis_docker
+            exit 0
+        ;;
+        --clear)
+            clear
+            aegis_banner
+            aegis_clear
             exit 0
         ;;
         --version)
