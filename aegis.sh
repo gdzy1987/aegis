@@ -69,7 +69,8 @@ exec \
     2> >(tee -a "${LOGFILE}" >&2)
 
 # List nocolor last here so that -x doesn't bork the display.
-SUCCOCOLOR=$(tput setaf 2)
+ERRCOLOR=$(tput setaf 1)
+SUCCCOLOR=$(tput setaf 2)
 INFOCOLOR=$(tput setaf 6)
 NOCOLOR=$(tput sgr0)
 
@@ -103,7 +104,16 @@ function succ_msg()
     local MSG
     msg_format MSG "$@"
     printf '%s' "${MSG}" >&5
-    printf '%s%s%s' "${SUCCOCOLOR}" "${MSG}" "${NOCOLOR}" >&3
+    printf '%s%s%s' "${SUCCCOLOR}" "${MSG}" "${NOCOLOR}" >&3
+}
+
+# Send an error message to the log file and stderr.
+function error_msg()
+{
+    local MSG
+    msg_format MSG "$@"
+    printf '%s' "${MSG}" >&5
+    printf '%s%s%s' "${ERRCOLOR}" "${MSG}" "${NOCOLOR}" >&4
 }
 
 # shellcheck disable=SC1091
@@ -135,8 +145,9 @@ function aegis_banner()
 
 function aegis_help()
 {
-    echo -e "\nUsage:  $0 [--clear] [--docker] [--version] [--help]"
+    echo -e "\nUsage:  $0 [--clear] [--fdisk] [--docker] [--version] [--help]"
     echo -e "Where:  --clear      Clear all system logs, cache and backup files."
+    echo -e "        --fdisk      Interactive mount data disk."
     echo -e "        --docker     Install docker service and set registry mirrors."
     echo -e "        --version    Print version and exit."
     echo -e "        --help       Print help and exit."
@@ -189,16 +200,22 @@ fi
 while :; do
     [ -z "$1" ] && exit 0;
     case $1 in
+        --clear)
+            clear
+            aegis_banner
+            aegis_clear
+            exit 0
+        ;;
         --docker)
             clear
             aegis_banner
             aegis_docker
             exit 0
         ;;
-        --clear)
+        --fdisk)
             clear
             aegis_banner
-            aegis_clear
+            aegis_fdisk
             exit 0
         ;;
         --version)

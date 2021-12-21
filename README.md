@@ -39,6 +39,12 @@ English | [简体中文](README.zh-CN.md)
     <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/login-information.png">
 </p>
 
+### Mount disk
+
+<p align="center">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/mount-disk.png">
+</p>
+
 ## ✨ Features
 
 - Password can be used for a maximum of 30 days.
@@ -132,6 +138,16 @@ Clear all system logs, cache and backup files.
 
 ```shell
 sudo bash aegis.sh --clear
+```
+
+### Mount disk
+
+Interactively mount the data disk (Tencent Cloud will use the soft link method of elastic cloud hard disk to mount), the data is priceless, remember to be careful during the operation!
+
+> If the selected hard disk is already mounted, you will be prompted to unmount and format the operation.
+
+```shell
+sudo bash aegis.sh --fdisk
 ```
 
 ### Install docker

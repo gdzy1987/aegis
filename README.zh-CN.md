@@ -39,6 +39,12 @@
     <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/login-information.png">
 </p>
 
+### 挂载硬盘
+
+<p align="center">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/mount-disk.png">
+</p>
+
 ## ✨ 工具特性
 
 - 限制密码使用期限为 30 天。
@@ -136,6 +142,16 @@ Aegis 中包含了一些独立的功能，这些功能并不在自动执行的�
 
 ```shell
 sudo bash aegis.sh --clear
+```
+
+### 挂载硬盘
+
+交互式挂载数据盘（腾讯云将使用弹性云硬盘的软链接方式挂载），数据无价，操作过程切记小心！
+
+> 如果所选的硬盘已经被挂载，将会提示解除挂载及格式化操作。
+
+```shell
+sudo bash aegis.sh --fdisk
 ```
 
 ### 安装 Docker
