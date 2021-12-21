@@ -68,9 +68,16 @@ function aegis_docker()
     systemctl restart docker.service
     systemctl enable docker.service
 
+    # Install Docker Compose
+    curl -L https://get.daocloud.io/docker/compose/releases/download/v2.2.2/docker-compose-"$(uname -s)"-"$(uname -m)" -o /usr/local/bin/docker-compose
+    chmod +x /usr/local/bin/docker-compose
+    ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
     grep "" /etc/apt/sources.list.d/docker.list
     echo
     systemctl status docker.service --no-pager
+    echo
+    docker-compose --version
 
     printf '\n%s%s\n%s%s\n\n' "${INFOCOLOR}" \
     "Done, please log out and log back in, then test docker!" \
