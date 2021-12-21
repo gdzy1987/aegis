@@ -27,6 +27,11 @@
 # shellcheck disable=SC2143
 function aegis_fdisk()
 {
+    if [ -z "$(fdisk -l | grep -o "Disk /dev/.*vd[b-z]")" ];then
+        error_msg '\n%s\n' "Error: No disk found for operation."
+        exit 1
+    fi
+
     info_msg '\n%s\n' "[1] Show all active disks"
     fdisk -l | grep -o "Disk /dev/.*vd[b-z]"
 
@@ -36,7 +41,7 @@ function aegis_fdisk()
         if [ -z "$(echo "${DISK}" | grep '^/dev/.*vd[b-z]')" ]; then
             error_msg '%s' "Format error, please try again: "
         else
-            if [ -z "$(fdisk -l | grep -o "Disk /dev/.*vd[b-z]" | grep "${DISK}")" ]; then
+            if [ -z "$(fdisk -l | grep -o "Disk /dev/.*vd[b-z]" | grep "Disk ${DISK}")" ]; then
                 error_msg '%s' "No disk found, please try again: "
             else
                 fdisk_mounted
