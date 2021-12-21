@@ -45,8 +45,8 @@ function aegis_clear()
     # /var/backups/
     find /var/backups -type f -delete
 
-    apt-get autoclean
-    apt-get autoremove
+    apt-get autoclean -y
+    apt-get autoremove -y
 
     succ_msg '%s\n' "Success, this operation is complete!"
 }
