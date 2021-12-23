@@ -185,6 +185,7 @@ function aegis_main()
     aegis_usersandgroup
     aegis_logindefs
     aegis_tcpbbr
+    aegis_swap
     aegis_apport
     aegis_debugshell
     aegis_ctrlaltdel
