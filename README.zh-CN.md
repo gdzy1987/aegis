@@ -154,6 +154,16 @@ sudo bash aegis.sh --clear
 sudo bash aegis.sh --fdisk
 ```
 
+### 修改端口
+
+交互式修改 SSH 端口。
+
+> 端口范围建议在 10000 到 65535 之间。
+
+```shell
+sudo bash aegis.sh --aegis_sshport
+```
+
 ### 安装 Docker
 
 安装 Docker 服务并设置镜像加速（腾讯云、阿里云、华为云自动使用其自有加速地址），添加非 `root` 账号的运行权限。

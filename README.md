@@ -150,6 +150,16 @@ Interactively mount the data disk (Tencent Cloud will use the soft link method o
 sudo bash aegis.sh --fdisk
 ```
 
+### Modify the SSH port
+
+Interactively modify the SSH port.
+
+> The port range is recommended to be between 10000 and 65535.
+
+```shell
+sudo bash aegis.sh --aegis_sshport
+```
+
 ### Install docker
 
 Install docker service and set registry mirrors (Tencent, Alibaba, HUAWEI Cloud automatically use their own acceleration address), and add run permission for non-root accounts.

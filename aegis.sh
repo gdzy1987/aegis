@@ -6,7 +6,7 @@
 # The latest version of Aegis can be found at:
 # https://github.com/seatonjiang/aegis
 #
-# Copyright (C) 2021 Seaton Jiang
+# Copyright (C) 2021-2022 Seaton Jiang
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -145,12 +145,13 @@ function aegis_banner()
 
 function aegis_help()
 {
-    echo -e "\nUsage:  $0 [--clear] [--fdisk] [--docker] [--version] [--help]"
-    echo -e "Where:  --clear      Clear all system logs, cache and backup files."
-    echo -e "        --fdisk      Interactive mount data disk."
-    echo -e "        --docker     Install docker service and set registry mirrors."
-    echo -e "        --version    Print version and exit."
-    echo -e "        --help       Print help and exit."
+    echo -e "\nUsage:  $0 [--clear] [--fdisk] [--sshport] [--docker] [--version] [--help]"
+    echo -e "Where:  --clear       Clear all system logs, cache and backup files."
+    echo -e "        --fdisk       Interactive mount data disk."
+    echo -e "        --sshport     Modify the SSH port."
+    echo -e "        --docker      Install docker service and set registry mirrors."
+    echo -e "        --version     Print version and exit."
+    echo -e "        --help        Print help and exit."
     echo -e "\nMail bug reports or suggestions to <hi@seatonjiang.com>."
 }
 
@@ -207,16 +208,22 @@ while :; do
             aegis_clear
             exit 0
         ;;
-        --docker)
-            clear
-            aegis_banner
-            aegis_docker
-            exit 0
-        ;;
         --fdisk)
             clear
             aegis_banner
             aegis_fdisk
+            exit 0
+        ;;
+        --sshport)
+            clear
+            aegis_banner
+            aegis_sshport
+            exit 0
+        ;;
+        --docker)
+            clear
+            aegis_banner
+            aegis_docker
             exit 0
         ;;
         --version)
