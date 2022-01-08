@@ -1,7 +1,7 @@
 [English](README.md) | 简体中文
 
 <p align="center">
-    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/aegis.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/.github/aegis.png">
 </p>
 
 <p align="center">
@@ -30,19 +30,19 @@
 ### 脚本执行
 
 <p align="center">
-    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/script-execution.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/.github/script-execution.png">
 </p>
 
 ### 登录信息
 
 <p align="center">
-    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/login-information.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/.github/login-information.png">
 </p>
 
 ### 挂载硬盘
 
 <p align="center">
-    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/mount-disk.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/.github/mount-disk.png">
 </p>
 
 ## ✨ 工具特性
@@ -184,8 +184,6 @@ aegis
 ├── aegis.sh
 ├── config
 │   └── (some config files)
-├── images
-│   └── (some image files)
 └── scripts
     └── (some script files)
 ```

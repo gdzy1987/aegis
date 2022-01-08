@@ -1,7 +1,7 @@
 English | [简体中文](README.zh-CN.md)
 
 <p align="center">
-    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/aegis.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/.github/aegis.png">
 </p>
 
 <p align="center">
@@ -30,19 +30,19 @@ English | [简体中文](README.zh-CN.md)
 ### Script Execution
 
 <p align="center">
-    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/script-execution.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/.github/script-execution.png">
 </p>
 
 ### Login Information
 
 <p align="center">
-    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/login-information.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/.github/login-information.png">
 </p>
 
 ### Mount disk
 
 <p align="center">
-    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/images/mount-disk.png">
+    <img src="https://cdn.jsdelivr.net/gh/seatonjiang/aegis@main/.github/mount-disk.png">
 </p>
 
 ## ✨ Features
@@ -180,8 +180,6 @@ aegis
 ├── aegis.sh
 ├── config
 │   └── (some config files)
-├── images
-│   └── (some image files)
 └── scripts
     └── (some script files)
 ```
