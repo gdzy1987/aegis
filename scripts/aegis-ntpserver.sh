@@ -36,7 +36,7 @@ function aegis_ntpserver()
 
     local SET_NTPSERVER
 
-    if [ "${NTP_SERVER}" != 'time1.cloud.tencent.com time2.cloud.tencent.com time3.cloud.tencent.com time4.cloud.tencent.com time5.cloud.tencent.com' ]; then
+    if [ "${NTP_SERVER}" != 'ntp.ntsc.ac.cn' ]; then
         SET_NTPSERVER=${NTP_SERVER}
     elif [ -n "$(wget -qO- -t1 -T2 169.254.0.23)" ]; then
         # Tencent Cloud
@@ -48,7 +48,7 @@ function aegis_ntpserver()
         # HUAWEI Cloud
         SET_NTPSERVER='ntp.myhuaweicloud.com'
     else
-        SET_NTPSERVER='time1.cloud.tencent.com time2.cloud.tencent.com time3.cloud.tencent.com time4.cloud.tencent.com time5.cloud.tencent.com'
+        SET_NTPSERVER='ntp.ntsc.ac.cn'
     fi
 
     local SERVER
