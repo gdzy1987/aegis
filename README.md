@@ -73,7 +73,7 @@ There are many more settings that are not listed, and you can refer to the files
 
 Make sure the server has git first, otherwise you need to install it using `sudo apt install git`.
 
-```shell
+```bash
 git clone https://github.com/seatonjiang/aegis.git
 ```
 
@@ -81,13 +81,13 @@ git clone https://github.com/seatonjiang/aegis.git
 
 Go to project directory.
 
-```shell
+```bash
 cd aegis
 ```
 
 Be sure to authenticate the contents of the config file.
 
-```shell
+```bash
 vim aegis.conf
 ```
 
@@ -95,7 +95,7 @@ vim aegis.conf
 
 If you are root, you can run it directly, if you are a normal user please use `sudo` and you must run the script with `bash`.
 
-```shell
+```bash
 sudo bash aegis.sh
 ```
 
@@ -136,7 +136,7 @@ Aegis contains a number of standalone functions that are not in the auto-execute
 
 Clear all system logs, cache and backup files.
 
-```shell
+```bash
 sudo bash aegis.sh --clear
 ```
 
@@ -146,7 +146,7 @@ Interactively mount the data disk (Tencent Cloud will use the soft link method o
 
 > If the selected hard disk is already mounted, you will be prompted to unmount and format the operation.
 
-```shell
+```bash
 sudo bash aegis.sh --fdisk
 ```
 
@@ -156,7 +156,7 @@ Interactively modify the SSH port.
 
 > The port range is recommended to be between 10000 and 65535.
 
-```shell
+```bash
 sudo bash aegis.sh --aegis_sshport
 ```
 
@@ -166,7 +166,7 @@ Install docker service and set registry mirrors (Tencent, Alibaba, HUAWEI Cloud 
 
 > After installation, please log out and log back in, then test docker.
 
-```shell
+```bash
 sudo bash aegis.sh --docker
 ```
 

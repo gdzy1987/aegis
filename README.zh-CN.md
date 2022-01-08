@@ -73,13 +73,13 @@
 
 确保服务器安装了 Git，否则需要先用 `sudo apt install git` 命令安装软件：
 
-```shell
+```bash
 git clone https://github.com/seatonjiang/aegis.git
 ```
 
 如果因为网络问题无法连接，可以使用国内镜像仓库，但是镜像仓库会有 `30` 分钟的延迟：
 
-```shell
+```bash
 git clone https://gitee.com/seatonjiang/aegis.git
 ```
 
@@ -87,13 +87,13 @@ git clone https://gitee.com/seatonjiang/aegis.git
 
 进入项目文件夹：
 
-```shell
+```bash
 cd aegis
 ```
 
 核对配置文件中的配置信息（配置文件说明在下文）：
 
-```shell
+```bash
 vim aegis.conf
 ```
 
@@ -101,7 +101,7 @@ vim aegis.conf
 
 如果是 root 账号，可以直接运行，如果是普通账号，需要使用 `sudo` 运行，而且必须用 `bash` 运行该脚本：
 
-```shell
+```bash
 sudo bash aegis.sh
 ```
 
@@ -140,7 +140,7 @@ Aegis 中包含了一些独立的功能，这些功能并不在自动执行的�
 
 > 某些 VPS 服务商（~~没有特指腾讯云~~）提供的镜像由于制作的过程不规范，导致打包了一些垃圾文件到镜像中，建议使用这些服务商的朋友，初始化系统之前先清理系统垃圾。
 
-```shell
+```bash
 sudo bash aegis.sh --clear
 ```
 
@@ -150,7 +150,7 @@ sudo bash aegis.sh --clear
 
 > 如果所选的硬盘已经被挂载，将会提示解除挂载及格式化操作。
 
-```shell
+```bash
 sudo bash aegis.sh --fdisk
 ```
 
@@ -160,7 +160,7 @@ sudo bash aegis.sh --fdisk
 
 > 端口范围建议在 10000 到 65535 之间。
 
-```shell
+```bash
 sudo bash aegis.sh --aegis_sshport
 ```
 
@@ -170,7 +170,7 @@ sudo bash aegis.sh --aegis_sshport
 
 > 安装完成后，请退出当前账号并重新登录，然后测试 Docker 的相关功能是否正常不报错。
 
-```shell
+```bash
 sudo bash aegis.sh --docker
 ```
 
