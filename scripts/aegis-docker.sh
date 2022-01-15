@@ -69,7 +69,7 @@ function aegis_docker()
     systemctl enable docker.service
 
     # Install Docker Compose
-    curl -L https://get.daocloud.io/docker/compose/releases/download/v2.2.2/docker-compose-"$(uname -s)"-"$(uname -m)" -o /usr/local/bin/docker-compose
+    curl -L https://get.daocloud.io/docker/compose/releases/download/"${DOCKER_COMPOSE}"/docker-compose-"$(uname -s)"-"$(uname -m)" -o /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
     ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 
