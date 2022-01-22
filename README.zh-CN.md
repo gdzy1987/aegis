@@ -128,6 +128,9 @@ DNS_SERVER='119.29.29.29'
 
 # 修改 NTP 服务器（腾讯云、阿里云、华为云自动拉取元数据）
 NTP_SERVER='ntp.ntsc.ac.cn'
+
+# Docker Compose 版本
+DOCKER_COMPOSE='v2.2.3'
 ```
 
 ## 🔨 独立功能
@@ -161,7 +164,7 @@ sudo bash aegis.sh --fdisk
 > 端口范围建议在 10000 到 65535 之间。
 
 ```bash
-sudo bash aegis.sh --aegis_sshport
+sudo bash aegis.sh --sshport
 ```
 
 ### 安装 Docker

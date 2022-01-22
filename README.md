@@ -126,6 +126,9 @@ DNS_SERVER='119.29.29.29'
 # Modify the NTP server
 # Tencent, Alibaba, HUAWEI Cloud will automatically get the metadata.
 NTP_SERVER='ntp.ntsc.ac.cn'
+
+# Docker Compose version
+DOCKER_COMPOSE='v2.2.3'
 ```
 
 ## 🔨 Modular
@@ -157,7 +160,7 @@ Interactively modify the SSH port.
 > The port range is recommended to be between 10000 and 65535.
 
 ```bash
-sudo bash aegis.sh --aegis_sshport
+sudo bash aegis.sh --sshport
 ```
 
 ### Install docker
