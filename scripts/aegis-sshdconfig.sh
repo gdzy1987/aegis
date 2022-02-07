@@ -38,7 +38,7 @@ function aegis_sshdconfig()
         echo
         grep -Ev '^#|^$' /etc/ssh/sshd_config | uniq
     else
-        succ_msg '%s\n' "Success, the operation has been completed!"
+        succ_msg '%s\n' "Success, this operation is completed!"
     fi
 
     sleep 1

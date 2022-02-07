@@ -34,7 +34,7 @@ function aegis_timeout()
         if [[ $VERIFY == "Y" ]]; then
             grep -nri "TMOUT" /etc/profile.d/
         else
-            succ_msg '%s\n' "Success, the operation has been completed!"
+            succ_msg '%s\n' "Success, this operation is completed!"
         fi
     else
         succ_msg '%s\n' "Skip, this configuration already exists!"

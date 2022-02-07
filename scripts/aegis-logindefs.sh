@@ -49,7 +49,7 @@ function aegis_logindefs()
     if [[ $VERIFY == "Y" ]]; then
         grep -Ev '^#|^$' /etc/login.defs | uniq
     else
-        succ_msg '%s\n' "Success, the operation has been completed!"
+        succ_msg '%s\n' "Success, this operation is completed!"
     fi
 
     sleep 1

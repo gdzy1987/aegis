@@ -31,7 +31,7 @@ function aegis_rootaccount()
     if [[ $VERIFY == "Y" ]]; then
         passwd -S root
     else
-        succ_msg '%s\n' "Success, the operation has been completed!"
+        succ_msg '%s\n' "Success, this operation is completed!"
     fi
 
     sleep 1

@@ -40,7 +40,7 @@ function aegis_tcpbbr()
         echo
         lsmod | grep bbr
     else
-        succ_msg '%s\n' "Success, the operation has been completed!"
+        succ_msg '%s\n' "Success, this operation is completed!"
     fi
 
     sleep 1

@@ -41,5 +41,5 @@ function aegis_removeagent()
         rm -rf /tmp/tat_agent/
     fi
 
-    succ_msg '%s\n' "Success, the operation has been completed!"
+    succ_msg '%s\n' "Success, this operation is completed!"
 }
