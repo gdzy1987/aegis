@@ -31,7 +31,7 @@ function aegis_timezone()
     if [[ $VERIFY == "Y" ]]; then
         ls -l /etc/localtime
     else
-        succ_msg '%s\n' "Success, this operation is complete!"
+        succ_msg '%s\n' "Success, the operation has been completed!"
     fi
 
     sleep 1

@@ -35,7 +35,7 @@ function aegis_ctrlaltdel()
         echo
         grep CtrlAltDelBurstAction /etc/systemd/system.conf
     else
-        succ_msg '%s\n' "Success, this operation is complete!"
+        succ_msg '%s\n' "Success, the operation has been completed!"
     fi
 
     sleep 1

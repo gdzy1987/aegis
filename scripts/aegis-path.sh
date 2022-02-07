@@ -34,7 +34,7 @@ function aegis_path()
     if [[ $VERIFY == "Y" ]]; then
         cat /etc/environment
     else
-        succ_msg '%s\n' "Success, this operation is complete!"
+        succ_msg '%s\n' "Success, the operation has been completed!"
     fi
 
     sleep 1

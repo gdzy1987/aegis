@@ -59,7 +59,7 @@ function aegis_dnsserver()
         echo
         grep -Ev '^#|^$' /etc/systemd/resolved.conf | uniq
     else
-        succ_msg '%s\n' "Success, this operation is complete!"
+        succ_msg '%s\n' "Success, the operation has been completed!"
     fi
 
     sleep 1

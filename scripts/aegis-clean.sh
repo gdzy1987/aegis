@@ -48,5 +48,5 @@ function aegis_clear()
     apt-get autoclean -y
     apt-get autoremove -y
 
-    succ_msg '%s\n' "Success, this operation is complete!"
+    succ_msg '%s\n' "Success, the operation has been completed!"
 }

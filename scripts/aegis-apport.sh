@@ -35,7 +35,7 @@ function aegis_apport()
     if [[ $VERIFY == "Y" ]]; then
         systemctl status apport.service --no-pager
     else
-        succ_msg '%s\n' "Success, this operation is complete!"
+        succ_msg '%s\n' "Success, the operation has been completed!"
     fi
 
     sleep 1

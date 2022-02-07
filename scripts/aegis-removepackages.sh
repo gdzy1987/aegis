@@ -33,7 +33,7 @@ function aegis_removepackages()
         apt-get purge "${PACKAGE}" -y >/dev/null 2>&1
     done
 
-    succ_msg '%s\n' "Success, this operation is complete!"
+    succ_msg '%s\n' "Success, the operation has been completed!"
 
     sleep 1
 
