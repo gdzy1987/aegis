@@ -177,6 +177,16 @@ sudo bash aegis.sh --sshport
 sudo bash aegis.sh --docker
 ```
 
+### 卸载监控
+
+删除云厂商安装到服务器中的各种监控组件。
+
+> 目前已经支持腾讯云监控组件。
+
+```bash
+sudo bash aegis.sh --removeagent
+```
+
 ## 📂 目录结构
 
 下面是整个项目的文件夹结构，`config` 及 `scripts` 文件夹中的文件省略显示。

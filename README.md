@@ -173,6 +173,16 @@ Install docker service and set registry mirrors (Tencent, Alibaba, HUAWEI Cloud 
 sudo bash aegis.sh --docker
 ```
 
+### Uninstall agent
+
+Remove the various monitoring components installed into the server by the cloud vendor.
+
+> Tencent Cloud monitoring components are currently supported.
+
+```bash
+sudo bash aegis.sh --removeagent
+```
+
 ## 📂 Structure
 
 A quick look at the folder structure of this project.

@@ -145,13 +145,14 @@ function aegis_banner()
 
 function aegis_help()
 {
-    echo -e "\nUsage:  $0 [--clear] [--fdisk] [--sshport] [--docker] [--version] [--help]"
-    echo -e "Where:  --clear       Clear all system logs, cache and backup files."
-    echo -e "        --fdisk       Interactive mount data disk."
-    echo -e "        --sshport     Modify the SSH port."
-    echo -e "        --docker      Install docker service and set registry mirrors."
-    echo -e "        --version     Print version and exit."
-    echo -e "        --help        Print help and exit."
+    echo -e "\nUsage:  $0 [--clear] [--fdisk] [--sshport] [--docker] [--removeagent] [--version] [--help]"
+    echo -e "Where:  --clear          Clear all system logs, cache and backup files."
+    echo -e "        --fdisk          Interactive mount data disk."
+    echo -e "        --sshport        Modify the SSH port."
+    echo -e "        --docker         Install docker service and set registry mirrors."
+    echo -e "        --removeagent    Remove cloud server agent."
+    echo -e "        --version        Print version and exit."
+    echo -e "        --help           Print help and exit."
     echo -e "\nMail bug reports or suggestions to <hi@seatonjiang.com>."
 }
 
@@ -224,6 +225,12 @@ while :; do
             clear
             aegis_banner
             aegis_docker
+            exit 0
+        ;;
+        --removeagent)
+            clear
+            aegis_banner
+            aegis_removeagent
             exit 0
         ;;
         --version)
