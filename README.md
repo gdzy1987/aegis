@@ -200,3 +200,7 @@ aegis
 ## 🤝 Contributing
 
 We welcome all contributions. You can submit any ideas as pull requests or as GitHub issues, have a good time! :)
+
+## 📃 License
+
+The project is released under the GNU General Public License v3.0, see the [LICENCE](https://github.com/seatonjiang/aegis/blob/main/LICENSE) file for details.
